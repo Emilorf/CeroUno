@@ -1,22 +1,188 @@
----
-// ZONA 1: Frontmatter
-// ¡Aquí NO va el HTML! Esta zona es solo para importar componentes después.
----
-
-<!-- ZONA 2: Tu HTML de toda la vida -->
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8">
-    <title>CeroUno MVP</title>
-  </head>
-  <body style="background-color: #b4a561; color: #020202; text-align: center; margin-top: 50px;">
-    
-    <div>
-      <h1>CeroUno</h1>
-      <p>fiuimba y ese helicoptero? 
-	  
-	  life gone oni oni oni oninoni</p>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura CEROUNO</title>
+    <style>
+   
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: sans-serif;
+            background-color: #000; 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            
+           
+            display: flex;
+            flex-direction: column;
+            overflow: hidden; 
+        }
+
+       
+        .top-banner {
+            background-color: #ff00ff; 
+            color: white;
+            padding: 12px 0;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            font-weight: bold;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            flex-shrink: 0;
+        }
+
+        .marquee-text {
+            display: inline-block;
+            animation: scroll-left 20s linear infinite;
+        }
+
+        @keyframes scroll-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+      
+        .main-content {
+            flex-grow: 1; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+          .center-image-container {
+            max-width: 800px;
+            width: 100%;
+            max-height: 60vh; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .center-image-container img {
+            width: 150%;
+            height: 100%;
+            max-height: 100%; 
+            object-fit: contain;
+        }
+          .bottom-nav {
+              display: flex;
+              justify-content: center; 
+              align-items: center;
+              gap: 0px; 
+              padding-bottom: 60px;
+              flex-shrink: 0;
+          }
+
+          .icon-container {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex: 0 0 auto; 
+          }
+
+          .icon-container img {
+              width: 100%;
+              height: auto;
+              object-fit: contain;
+          }
+
+          .icon-bio {
+              width: 140px; 
+              height: 140px;
+          }
+
+          .icon-videos {
+              width: 160px;
+              height: 160px; 
+          }
+
+          .icon-photos {
+              width: 230px; 
+              height: 180px;
+          }
+
+          .icon-asterisk {
+              width: 220px; 
+              height: 220px;
+          }
+
+          .icon-covert-art {
+              width: 230px;
+              height: 200px;
+          }
+
+          .icon-artistas {
+              width: 160px; 
+              height: 160px;
+          }
+
+          .icon-shops {
+              width: 140px;
+              height: 140px;
+          }
+
+          /*pa celucos ahi*/
+
+        @media (max-width: 768px) {
+            .bottom-nav {
+                gap: 15px;
+                padding-bottom: 30px;
+            }
+            .icon-container {
+                width: 30px;
+                height: 30px;
+            }
+            .icon-container.large {
+                width: 60px;
+                height: 60px;
+            }
+            .top-banner {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+  
+    <div class="top-banner">
+        <div class="marquee-text">
+            CEROUNO ™ © MUSIC POWEHOUSE + FILMS + EVENTS &nbsp;&nbsp;&nbsp;
+            CEROUNO ™ © MUSIC POWEHOUSE + FILMS + EVENTS &nbsp;&nbsp;&nbsp;
+            CEROUNO ™ © MUSIC POWEHOUSE + FILMS + EVENTS &nbsp;&nbsp;&nbsp;
+            CEROUNO ™ © MUSIC POWEHOUSE + FILMS + EVENTS 
+        </div>
     </div>
-  </body>
+
+   
+    <div class="main-content">
+        <div class="center-image-container">
+             <img src="necesario/fondo/01-simbolo.png" alt=""> 
+        </div>
+    </div>
+
+    
+    <div class="bottom-nav">
+        
+        <div class="icon-container icon-bio"> <img src="necesario/logos/bio.jpg.jpeg"> </div>
+        <div class="icon-container icon-videos"><img src="necesario/logos/videos.jpg.jpeg"></div>
+        <div class="icon-container icon-photos"><img src="necesario/logos/photos.jpg.jpeg"></div>
+        
+        <div class="icon-container icon-asterisk"> <img src="necesario/logos/LOGO2.png"></div>
+        
+        <div class="icon-container icon-covert-art"><img src="necesario/logos/cover-art.jpg.jpeg"></div>
+        <div class="icon-container icon-artistas"><img src="necesario/logos/artistas.jpg.jpeg"></div>
+        <div class="icon-container icon-shops"><img src="necesario/logos/shops.jpg.jpeg"></div>
+    </div>
+
+</body>
 </html>
